@@ -1,1 +1,1 @@
-export const CUSTOM_NAME = 'Anubis Novabell';
+export const CUSTOM_NAME = 'Anubis CUSTOMERNAME';
