@@ -1,0 +1,64 @@
+@import './helpers';
+
+
+.ckl-app-security_login {
+    .loginWelcome {
+        // Remove background design 
+         &::before {
+            content: '';
+         }
+    
+        // Remove background design 
+         &::after {
+            content: '';
+         }
+        
+        /*
+         * Change the login form icon and text
+         */
+        .loginWelcome__header {
+            .loginWelcome__logo {
+                svg {
+                    display: none !important;
+                }
+        
+                &:after {
+                    content: '';
+                    display: flex;
+                    background-position: center;
+                    background-image: url('../assets/whale-tales-logo-no-text.png');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        
+            .loginWelcome__title {
+                @include hideOldContent;
+        
+                &:after {
+                    @include showNewContent;
+                    content: 'Login - Anubis HGS LAB';
+                }
+            }
+        
+        }
+        
+        .loginWelcome__content {
+            .euiCallOut {
+                background-color: #0f0f0f;
+            }
+        
+            .euiCallOut .euiCallOutHeader__title {
+                @include hideOldContent;
+                &:after {
+                    @include showNewContent;
+                    color: #ffffff !important; 
+                    content: "Not logged on Anubis"
+        
+                }
+            }
+        }
+    }
+}
